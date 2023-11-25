@@ -1,0 +1,85 @@
+.logogadz-icon {
+  top: 2px;
+  left: 45px;
+  width: 150px;
+  height: 80px;
+ 
+  border-radius: var(--br-xl);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.logogadz-button {
+  position: relative;
+  border: none;
+  left: 25px;
+  width: 180px;
+  height: 97px;
+  object-fit: cover;
+  background-color: var(--color-gray-200);
+}
+
+.logogadz-button :hover {
+  box-shadow: inset 100px 100px 100px 100px #1c1c39;
+}
+
+.divleftpanel-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  width: 279px;
+  height: 100px;
+}
+.divbar-item-icon {
+  position: absolute;
+  
+  width: 50px;
+  height: 100px;
+}
+
+.item :hover{
+  box-shadow: inset 100px 100px 100px 100px #2b2830;
+}
+
+.item{
+  position: relative;
+  width: 50px;
+  height: 100px;
+  cursor: pointer;
+  background-color: var(--color-gray-200);
+  border: none;
+}
+
+.divfn-nav-bar {
+  position: absolute;
+  width: 500px;
+  top: 0;
+  right: 90px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 28px;
+}
+
+
+.header-frame,
+.header {
+  position: absolute;
+  top: 0;
+  height: 100px;
+}
+.header {
+  width: calc(100% - 279px);
+  right: 0;
+  left: 279px;
+  background-color: var(--color-gray-200);
+}
+.header-frame {
+  left: 0;
+  width: 1899px;
+  overflow: hidden;
+}
