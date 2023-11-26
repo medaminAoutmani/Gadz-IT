@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Slide2.css'
-import asset from '../../../../public/asset-41-11@2x.svg';
+import asset from '../../../../public/asset-slide2.svg';
 import htmlph from '../../../../public/photo@2x.png';
 import cssph from '../../../../public/photo2@2x.png';
 import cpp from '../../../../public/photo1@2x.png';
