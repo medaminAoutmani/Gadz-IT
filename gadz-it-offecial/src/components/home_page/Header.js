@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import './Header.css';
 import SearchBar from './SearchBar';
-import logogadz from '../../public/Asset 6-2.svg';
-import divBarIem1 from '../../public/divbar--item.svg';
-import divBarIem2 from '../../public/divbar--item1.svg';
-import divBarIem3 from '../../public/divbar--item2.svg';
+import logogadz from '../../public/logo-gadz-offeciel.svg';
+import divBarIem1 from '../../public/divbar-search-item.svg';
+import divBarIem2 from '../../public/divbar-full-screen-item.svg';
+import divBarIem3 from '../../public/divbar-light-item.svg';
 
 
 class header extends Component {

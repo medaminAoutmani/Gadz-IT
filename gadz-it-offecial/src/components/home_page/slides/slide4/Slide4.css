@@ -1,0 +1,130 @@
+.divgeneric-block-child4 {
+  position: absolute;
+  top: 400px;
+  left: 24px;
+  width: 500px;
+  height: 280px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.pseudo4-1 {
+  border-radius: var(--br-xl);
+  background-color: transparent;
+  box-shadow: 0 5px 15px #8768f8;
+  opacity: 0.1;
+}
+.pseudo4-1,
+.pseudo4-2,
+.pseudomask-group4 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.pseudo4-2 {
+  border-radius: var(--br-xl);
+  background: linear-gradient(
+    270deg,
+    #4813d1,
+    #6608fa 33.33%,
+    #b545ff 66.67%,
+    #da8b79
+  );
+}
+.pseudomask-group4 {
+  background-color: var(--color-mediumslateblue);
+}
+.get-started {
+  position: absolute;
+  top: 26px;
+  left: calc(50% - 91px);
+  font-size: 38px;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  text-transform: uppercase;
+  display: flex;
+  font-family: var(--font-khand);
+  color: var(--color-silver);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 183px;
+  height: 21px;
+}
+.link4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #1c1925;
+  position: absolute;
+  top: calc(50% + 235px);
+  left: 623px;
+  border-radius: var(--br-xl);
+  width: 250px;
+  height: 74.4px;
+  overflow: hidden;
+}
+.heading-4-1,
+.heading-4-2,
+.heading-4-3 {
+  position: absolute;
+  top: 52px;
+  left: calc(50% - 547px);
+  line-height: 67.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 740px;
+  height: 166px;
+}
+.heading-4-2,
+.heading-4-3 {
+  top: 229px;
+  left: calc(50% - 642px);
+  font-size: 35px;
+  width: 929px;
+}
+.heading-4-3 {
+  top: 715px;
+  left: calc(50% - 310px);
+  font-size: 20px;
+  width: 755px;
+  height: 49px;
+}
+.divgeneric-block4 {
+  position: absolute;
+  width: calc(100% - 40px);
+  top: 99px;
+  right: 37px;
+  left: 3px;
+  height: 790px;
+  overflow: hidden;
+}
+.asset-41-44 {
+  position: absolute;
+  top: 135px;
+  left: 972px;
+  width: 300px;
+  height: 670px;
+  object-fit: cover;
+}
+.divgeneric-block-wrapper4 {
+  position: relative;
+  top: 10px;
+  border-radius: var(--br-5xl);
+  left: calc(50% - 706.5px);
+  background-image: url(../../../../public/background-slides.png);
+  width: 1400px;
+  height: 889.2px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-inter);
+  font-size: var(--font-size-37xl);
+}
