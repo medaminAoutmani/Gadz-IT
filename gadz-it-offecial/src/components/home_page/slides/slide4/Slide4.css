@@ -67,6 +67,20 @@
   height: 74.4px;
   overflow: hidden;
 }
+
+.link4 :hover {
+  box-shadow: 10px 10px 10px rgba(72, 19, 209, 0.25);
+}
+
+.parent-link {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 90px;
+  left: 610px;
+  top: calc(50% + 220px);
+}
+
 .heading-4-1,
 .heading-4-2,
 .heading-4-3 {

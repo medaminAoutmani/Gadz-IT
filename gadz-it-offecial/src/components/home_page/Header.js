@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import FullScreenButton from './FullScreen';
 import './Header.css';
 import SearchBar from './SearchBar';
+
 import logogadz from '../../public/logo-gadz-offeciel.svg';
 import divBarIem1 from '../../public/divbar-search-item.svg';
-import divBarIem2 from '../../public/divbar-full-screen-item.svg';
 import divBarIem3 from '../../public/divbar-light-item.svg';
 
 
@@ -46,20 +46,14 @@ class header extends Component {
           </div>
           <div className="header">
             <div className="divfn-nav-bar">
-            <button className='item' >
+              <button className='item' >
                 <img
                   className="divbar-item-icon"
                   alt=""
                   src={divBarIem3}
                 />
               </button>
-              <button className='item' >
-                <img
-                  className="divbar-item-icon"
-                  alt=""
-                  src={divBarIem2}
-               />
-              </button>
+              <FullScreenButton/>
               
               <button onClick={this.handleButtonClick} className='item' >
                 <img

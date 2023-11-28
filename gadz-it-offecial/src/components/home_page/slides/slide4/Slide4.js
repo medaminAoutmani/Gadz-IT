@@ -1,10 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Slide4.css';
 import gadzLogo from '../../../../public/logo-gadz-offeciel.svg';
-import assetSlide4 from '../../../../public/asset-slide4.svg'
+import assetSlide4 from '../../../../public/asset-slide4.svg';
+import useCustomHistory from '../../../login_page/CustomHistory';
 
-class Slide4 extends Component {
-  render() {
+
+const Slide4 = () => {
+  
+    const { navigateTo } = useCustomHistory();
+
+  const handleButtonClick = () => {
+    navigateTo('/Login');
+  };
     return (
       <div class="divgeneric-block-wrapper4">
       <div class="divgeneric-block4">
@@ -13,14 +20,13 @@ class Slide4 extends Component {
           alt=""
           src={gadzLogo}
         />
-
-        <button class="link4">
-          <div class="pseudo4-1"></div>
-          <div class="pseudomask-group4">
-            <div class="pseudo4-2"></div>
-          </div>
-          <b class="get-started">GET STARTED</b>
-        </button>
+          <button class="link4" onClick={handleButtonClick} >
+            <div class="pseudo4-1"></div>
+            <div class="pseudomask-group4">
+              <div class="pseudo4-2"></div>
+            </div>
+            <b class="get-started">GET STARTED</b>
+          </button>
         <div class="heading-4-1">
           Ready to unlock the power of the Gadz'IT platform?
         </div>
@@ -36,6 +42,6 @@ class Slide4 extends Component {
     </div>
     )
   }
-}
+
 
 export default Slide4

@@ -8,7 +8,7 @@ import Carousel from './Carousel';
 const slides = [
   <Slide1/>,
   <Slide2/>,
-  <Slide4/>
+  <Slide4 />
 ]
 
 function Slider() {
