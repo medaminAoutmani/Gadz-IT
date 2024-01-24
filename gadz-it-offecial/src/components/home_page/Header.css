@@ -1,10 +1,6 @@
 .logogadz-icon {
-  top: 2px;
-  left: 45px;
-  width: 150px;
-  height: 80px;
- 
-  border-radius: var(--br-xl);
+  width:83.34%;
+  height: 84.22%;
   color: var(--color-white);
   cursor: pointer;
 }
@@ -12,15 +8,12 @@
 .logogadz-button {
   position: relative;
   border: none;
-  left: 25px;
-  width: 180px;
-  height: 97px;
+  left: 9.3%;
+  width: 71.43%;
+  aspect-ratio: 36/18.189;
   object-fit: cover;
   background-color: var(--color-gray-200);
-}
-
-.logogadz-button :hover {
-  box-shadow: inset 100px 100px 100px 100px #1c1c39;
+  border-radius: var(--br-xl);
 }
 
 .divleftpanel-logo {
@@ -30,14 +23,14 @@
   background-color: var(--color-gray-200);
   border-bottom: 1px solid var(--color-gray-200);
   box-sizing: border-box;
-  width: 279px;
-  height: 100px;
+  width: 14%;
+  height: 100%;
 }
 .divbar-item-icon {
-  position: absolute;
+  position: relative;
   
-  width: 50px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .item :hover{
@@ -46,40 +39,48 @@
 
 .item{
   position: relative;
-  width: 50px;
-  height: 100px;
+  width: 19.234%;
+  height: 100%;
+  padding: 0;
   cursor: pointer;
   background-color: var(--color-gray-200);
   border: none;
 }
 
 .divfn-nav-bar {
-  position: absolute;
-  width: 500px;
+  position: relative;
+  width: 90.28%;
+  height: 100%;
   top: 0;
-  right: 90px;
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 28px;
+  gap: 10.77%;
 }
 
 
 .header-frame,
 .header {
-  position: absolute;
+  position:relative;
   top: 0;
-  height: 100px;
+  
 }
 .header {
-  width: calc(100% - 279px);
-  right: 0;
-  left: 279px;
-  background-color: var(--color-gray-200);
+  width: 15%;
+  height: 100%;
+  margin-left: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .header-frame {
   left: 0;
-  width: 1899px;
+  max-width: 100%;
   overflow: hidden;
+  display: flex;
+  aspect-ratio: 96/5;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-gray-200);
 }

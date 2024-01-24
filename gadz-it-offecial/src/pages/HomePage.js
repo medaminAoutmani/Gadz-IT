@@ -11,8 +11,8 @@ class HomePage extends Component {
         <div className="global-frame">
           <Header/>
           <div className="body-frame">
-            <Footer/>
             <Home/>
+            <Footer/>
           </div>
         </div>
       </div>
