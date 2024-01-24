@@ -5,9 +5,9 @@ class Slide1 extends Component {
   render() {
     return (
       <div>
-        <div className="divsection-home">
-          <div className="divsection-left">
-            <div className="divgeneric-block-wrapper">
+        <div className="divsection-home-1">
+          <div className="divsection-left-1">
+            <div className="divgeneric-block-wrapper-1">
               <img
                 className="image1-slide1"
                 alt=""
@@ -42,9 +42,9 @@ class Slide1 extends Component {
                   <div className="button-frame">
                     <button className="link" >
                       <div className="pseudomask-group">
-                        <div className="pseudo"></div>
+                        <div className="pseudo"><b className="try-now">Try NOW</b></div>
                       </div>
-                      <b className="try-now">Try NOW</b>
+                      
                     </button>
                   </div>
                 </div>

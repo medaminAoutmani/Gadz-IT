@@ -42,19 +42,19 @@
 .footer,
 .footer-frame {
   position: absolute;
-  height: 71px;
+  height: 6.275%;
 }
 .footer {
   top: 0;
-  left: 300px;
+  left: 9.115%;
   border-top: 1px solid var(--color-darkslategray);
   box-sizing: border-box;
-  width: 1620px;
+  width: 83.3334%;
 }
 .footer-frame {
   
-  top: 990px;
+  top: 91.4973%;
   left: 0;
-  width: 1920px;
+  width: 100%;
   overflow: hidden;
 }

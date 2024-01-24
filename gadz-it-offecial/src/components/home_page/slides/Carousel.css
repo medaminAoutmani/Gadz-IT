@@ -1,14 +1,15 @@
 .carousel {
-  width: 100%;
+  max-width: 80%;
   height: 100%;
   overflow: hidden;
-  
 }
 
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
-  
+  flex-direction: row;
+  gap: 20px;
+  height: 91.819%;
 }
 
 .carousel-slide {
@@ -18,7 +19,8 @@
 .carousel-buttons {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10px;
+  margin-top: 0.6518%;
+  height: 6.322%;
 }
 
 .button-arrow {
@@ -26,9 +28,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 1.3028%;
   color :#ffffff;
-  
+  width: 3.0123%;
+  height: 68.05%;
 }
 
 .button-arrow :hover{
@@ -40,7 +43,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1.3028%;
 }
 
 .indicator-buttons {
@@ -60,3 +63,14 @@
 .indicator-symbol-active {
   color: #ffffff;
 }
+
+/*
+@media (max-width: 1200px) {
+  .carousel {
+    max-width: 95%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+  
+}
+*/

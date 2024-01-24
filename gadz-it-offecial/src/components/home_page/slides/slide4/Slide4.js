@@ -13,7 +13,7 @@ const Slide4 = () => {
     navigateTo('/Login');
   };
     return (
-      <div class="divgeneric-block-wrapper4">
+      <div class="divgeneric-block-wrapper-4">
       <div class="divgeneric-block4">
         <img
           class="divgeneric-block-child4"
@@ -21,11 +21,13 @@ const Slide4 = () => {
           src={gadzLogo}
         />
           <button class="link4" onClick={handleButtonClick} >
-            <div class="pseudo4-1"></div>
-            <div class="pseudomask-group4">
-              <div class="pseudo4-2"></div>
-            </div>
-            <b class="get-started">GET STARTED</b>
+            <div class="pseudo4-1">
+              <div class="pseudomask-group4">
+                <div class="pseudo4-2">
+                  <b class="get-started">GET STARTED</b>
+                </div>
+              </div>
+            </div> 
           </button>
         <div class="heading-4-1">
           Ready to unlock the power of the Gadz'IT platform?
