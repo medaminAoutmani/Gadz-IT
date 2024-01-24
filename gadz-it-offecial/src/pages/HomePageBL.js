@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './HomePage.css';
-import Header from '../components/home_page/Header';
-import Home from '../components/home_page/Home';
-import Footer from '../components/home_page/Footer';
+import './HomePageBL.css';
+import Header from '../components/home_page_BL/Header';
+import Home from '../components/home_page_BL/Home';
+import Footer from '../components/home_page_BL/Footer';
 
-class HomePage extends Component {
+class HomePageBL extends Component {
   render() {
     return (
       <div className="desktop">
@@ -20,4 +20,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default HomePageBL;
