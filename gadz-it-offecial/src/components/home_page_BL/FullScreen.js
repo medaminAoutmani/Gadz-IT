@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
-import divBarIem1 from '../../public/divbar-full-screen-item.svg';
+import full_screen from '../../assets/SVGfull-screen.svg';
 import divBarIem2 from '../../public/divbar-exit-full-screen-item.svg';
-import './Header.css'
+
+
+
+import '../home_page_AL/HeaderAL.css'
 
 function FullScreenButton() {
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -59,16 +62,16 @@ function FullScreenButton() {
   };
 
   return (
-    <button className='item' onClick={handleClickAndFullScreen}>
+    <button className='link-item' onClick={handleClickAndFullScreen}>
       {isClicked ?
         <img
-          className="divbar-item-icon"
+          className="svg-icon22"
           alt="clicked"
-          src={divBarIem1} 
+          src={full_screen} 
        />
         :
         <img
-          className="divbar-item-icon"
+          className="svg-icon22"
           alt="clicked"
           src={divBarIem2} 
        />

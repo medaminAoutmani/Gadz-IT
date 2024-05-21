@@ -1,0 +1,30 @@
+.footer-AL {
+  width: 100%;
+  height: 4.35rem;
+  border-top: 1px solid var(--color-darkslategray);
+  box-sizing: border-box;
+  flex-direction: row;
+  position: relative;
+  
+  font-size: var(--font-size-mini-2);
+  color: var(--color-gray-100);
+  font-family: var(--font-heebo);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--color-gray-600);
+
+}
+
+.frenify-team-AL {
+  padding-left: 20px;
+}
+
+.list-item-AL {
+  padding-left: 1420px;
+}
+
+.list-item1-AL {
+  padding-left: 50px;
+}
