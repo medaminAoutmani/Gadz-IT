@@ -98,9 +98,13 @@
   position: relative;
   /*height: 100%;*/
   overflow: hidden;
-  max-width: 97%;
+  max-width: calc(100% - 56.8px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+@media (max-width: 1400px) {
+
 }
