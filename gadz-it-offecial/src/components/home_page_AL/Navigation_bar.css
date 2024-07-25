@@ -7,10 +7,11 @@ a {
 .fuse-vertical-navigation {
   flex: 1;
   height: 100vh;
-  width: 14.5839%;
+  width: 300px;
   position: fixed;
   overflow: hidden;
   box-shadow: -1.3px 0 0 rgba(241, 245, 249, 0.12) inset;
+  font-family: var(--font-inter);
 }
 
 .oppen{
@@ -32,7 +33,7 @@ a {
   flex: 1;
   height: 100%;
   min-width: 13.542%;
-  max-width: 14.5839%;
+  max-width: 300px;
   
   
 }
@@ -100,6 +101,7 @@ a {
   font-size: var(--font-size-smi);
   color: var(--download-16-turbo);
   height: 266.50px;
+  width: 298px;
 }
 
 .divflex3,
@@ -195,10 +197,15 @@ a {
 }
 
 .button-item {
-  width: 40px;
+  width: 35px;
+  margin-right: 5px;
   border-radius: 26.08px;
-  height: 40px;
+  height: 35px;
   position: relative;
+}
+
+.button-item:hover {
+  background-color: #ffffff1f
 }
 
 .img-svg {
@@ -262,13 +269,21 @@ a {
 }
 
 .button1 {
-  width: 40px;
+  display: flex;
+  width: 35px;
+  margin-left: 5px;
   border-radius: 26.08px;
-  height: 40px;
+  height: 35px;
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 }
+
+.button1:hover {
+  background-color: #ffffff1f
+}
+
 
 .spanrelative {
   flex-direction: column;
@@ -278,20 +293,13 @@ a {
   height: 27.2px;
 }
 
-.button1,
+
 .spanrelative {
   display: flex;
   align-items: center;
 }
 
-.img {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-}
+
 
 .svg-icon-1 {
   width: 24px;
@@ -446,9 +454,24 @@ a {
   justify-content: flex-start;
   font-size: var(--font-size-base-6);
   color: var(--download-16-heliotrope);
-  height: 56.5px;
+  height: 40px;
   width: 100%;
+  margin-top: 24px;
 }
+
+.divfuse-vertical-navigation-idash {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-base-6);
+  color: var(--download-16-heliotrope);
+  height: 40px;
+  width: 100%;
+  
+}
+
 
 
 

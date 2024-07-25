@@ -113,7 +113,7 @@
   width: 87.48%;
   align-items: center;
   justify-content: center;
-  padding: 0  2.012%;
+  padding: 0 2.012%;
   min-height: 11.6rem;
   margin: 0 4.2746%;
 }
@@ -146,7 +146,7 @@
   flex: 1;
   flex-direction: row;
   align-items: center;
-  padding: 0 ;
+  padding: 0;
   height: 100%;
 }
 
@@ -220,22 +220,22 @@
   align-items: center;
   justify-content: flex-start;
   border-radius: 10112.07px;
-  background-color: var(--download-4-mirage);
+  /*background-color: var(--download-4-mirage);*/
   height: 40px;
   flex-direction: row;
   justify-content: center;
   width: 125px;
-  box-sizing: border-box;
-  cursor: pointer;
+
 }
 
+/*
 .divflex2 :hover {
   border-radius: 10112.07px;
   background-color: #353065 ;
   
   box-sizing: border-box;
 }
-
+*/
 .img-svg2 {
   width: 20.2px;
   position: relative;
@@ -286,14 +286,16 @@
   font-size: var(--font-size-mini-2);
   color: var(--download-16-gull-gray);
   width: 100%;
-  height: 88%;
+  height: 100%;
+  /**88%*/
 }
+
 
 .divflex-auto {
   align-self: stretch;
-  border-top: 0.8px solid var(--download-4-mystic);
+
   flex-direction: column;
-  padding-top: 1.5rem;
+  padding-top: 0;
   width: 100%;
   height: 100%;
 }
@@ -309,7 +311,7 @@
   flex: 1;
   flex-direction: column;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   height: 100%;
   width: 100%;
@@ -319,22 +321,23 @@
   width: 87.63%;
   margin: 0 6rem;
   height: 3.4rem;
-  box-shadow: inset 0 -1px var(--fuse-border) ;
+  /*box-shadow: inset 0 -1px var(--fuse-border) ;*/
 }
 
 
 .divmat-mdc-tab-label-containe,
 .mat-tab-header {
-  
+
   overflow: hidden;
   flex-direction: row;
 }
+
 .divmat-mdc-tab-label-containe {
   flex: 1;
   align-self: stretch;
   background-color: var(--download-4-nero-02);
   /*box-shadow: 0-1px 0#e2e8f0 inset;*/
-  
+
   height: 100%;
 }
 
@@ -435,9 +438,9 @@
   border-radius: 10112.07px;
   background-color: var(--previewthemeforestnet-maroon);
   align-items: center;
-  padding: 4.045232772827148px 7.471921443939209px 4.045232772827148px
-    7.829169273376465px;
+  padding: 4.045232772827148px 7.471921443939209px 4.045232772827148px 7.829169273376465px;
 }
+
 .spanpx-2margin {
   align-items: flex-start;
   padding: 0 0 0 8.090465545654297px;
@@ -469,12 +472,12 @@
 
 @media (min-width: 1601px) {
 
-  .divflex5{
+  .divflex5 {
     display: flex;
     align-items: center;
   }
 
-  .divbg-card{
+  .divbg-card {
     max-width: 1380px;
     margin: 0;
   }
@@ -484,7 +487,7 @@
     max-width: 1360px;
   }
 
-  .mat-tab-group{
+  .mat-tab-group {
     display: flex;
     align-items: center;
   }
