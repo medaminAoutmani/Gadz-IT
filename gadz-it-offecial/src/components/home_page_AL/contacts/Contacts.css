@@ -1,0 +1,76 @@
+.divflex-auto1 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0;
+  width: 100%;
+
+  position: relative;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+
+.divflex-auto2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  line-height: normal;
+  letter-spacing: normal;
+  height: calc(100vh - 70.5px);
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.divflex-auto2::-webkit-scrollbar {
+  width: 4px;
+}
+
+.divflex-auto2::-webkit-scrollbar-track {
+  background: transparent;
+  /**rgb(6, 3, 62)*/
+}
+
+.divflex-auto2::-webkit-scrollbar-corner {
+  background-color: transparent;
+  /* Set the background color of the corner to match the container */
+}
+
+.header-box-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 32px 32px;
+  width: calc(100% - 64px);
+}
+
+.form-control {
+  width: 77%;
+}
+
+.search-grid {
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media (max-width: 950px) {
+  .header-box-contacts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-control {
+    width: auto;
+    margin-right: 10px !important;
+
+  }
+
+  .search-grid {
+    width: auto !important;
+  }
+
+}

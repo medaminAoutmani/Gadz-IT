@@ -1,0 +1,11 @@
+.divflex-chat-auto1 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  line-height: normal;
+  letter-spacing: normal;
+}

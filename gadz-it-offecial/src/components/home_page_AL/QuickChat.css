@@ -45,8 +45,9 @@
 }
 
 .divquick-chat-header {
+  border-bottom: 0.8px solid var(--color-darkviolet);
   align-self: stretch;
-  height: 68px;
+  height: 70px;
   justify-content: flex-start;
   box-sizing: border-box;
 }

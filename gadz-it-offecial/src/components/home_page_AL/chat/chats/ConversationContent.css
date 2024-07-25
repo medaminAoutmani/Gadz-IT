@@ -1,0 +1,25 @@
+.divflex-chat-content {
+  display: flex;
+  height: calc(100vh - 72px);
+  border-left: 0.8px solid #ab0cdf;
+  transition: width 0.5s;
+}
+
+.box-main-content {
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.box-main-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.box-main-content::-webkit-scrollbar-track {
+  background: transparent;
+  /**rgb(6, 3, 62)*/
+}
+
+.box-main-content::-webkit-scrollbar-corner {
+  background-color: transparent;
+  /* Set the background color of the corner to match the container */
+}
