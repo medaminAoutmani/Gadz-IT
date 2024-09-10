@@ -3,7 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;600&display=swap");
 
-html ,body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
   margin: 0;
   line-height: normal;
   background-color: var(--color-gray-300);
@@ -14,11 +19,25 @@ html ,body {
   width: 100%;
 }
 
-#root{
+#root {
   display: flex;
   flex-grow: 1;
   flex-shrink: 1;
   width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(6, 3, 62);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-darkviolet);
+  cursor: pointer;
+  border-radius: 300px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
 }
 
 :root {
@@ -53,7 +72,7 @@ html ,body {
   --font-size-xs: 12px;
   --font-size-smi-9: 12.9px;
   --font-size-xs-8: 11.8px;
- 
+
 
 
 
@@ -91,7 +110,7 @@ html ,body {
   --download-1-catskill-white: #f8fafc;
   --download-4-royal-blue: #4f46e5;
   --download-4-nero-02: rgba(255, 255, 255, 0);
-  --fuse-border: rgba(241,245,249, 0.12);
+  --fuse-border: rgba(241, 245, 249, 0.12);
   --download-13-storm-gray: #74767e;
   --download-13-wild-sand: #f7f7f7;
   --download-13-wild-sand1: #f5f5f5;
@@ -178,4 +197,3 @@ html ,body {
   --padding-10xs: 3px;
   --padding-13xl: 32px;
 }
-

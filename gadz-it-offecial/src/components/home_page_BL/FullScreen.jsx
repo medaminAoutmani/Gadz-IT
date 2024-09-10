@@ -1,27 +1,26 @@
-import React, {useState} from 'react';
-import full_screen from '../../assets/SVGfull-screen.svg';
-import divBarIem2 from '../../public/divbar-exit-full-screen-item.svg';
+import React, { useState } from 'react';
+import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
+import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlined';
 
 
 
-import '../home_page_AL/HeaderAL.css'
 
-function FullScreenButton() {
+function FullScreenButton({ isWhiteMode }) {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isClicked, setIsClicked] = useState(true);
 
   const handleClick = () => {
-    if (!isClicked){
+    if (!isClicked) {
       setIsClicked(true);
     } else {
       setIsClicked(false);
     }
   };
-  
+
   const handleFullScreen = () => {
     if (!isFullScreen) {
       enterFullScreen();
-      
+
     } else {
       exitFullScreen();
     }
@@ -44,7 +43,7 @@ function FullScreenButton() {
     }
 
     setIsFullScreen(true);
-    
+
   };
 
   const exitFullScreen = () => {
@@ -57,24 +56,16 @@ function FullScreenButton() {
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
-    
+
     setIsFullScreen(false);
   };
 
   return (
-    <button className='link-item' onClick={handleClickAndFullScreen}>
+    <button className={`relative w-full h-[40px] flex items-center justify-center rounded-full pointer border-0 ${isWhiteMode ? ' bg-[#EAEAEA]' : 'bg-[#2b2830]'} p-0 my-[15px] mx-0 duration-500 hover:bg-transparent hover:scale-110 `} onClick={handleClickAndFullScreen}>
       {isClicked ?
-        <img
-          className="svg-icon22"
-          alt="clicked"
-          src={full_screen} 
-       />
+        <FullscreenOutlinedIcon sx={{ width: '30px', height: '30px', padding: 'auto', color: `${isWhiteMode ? '#606f86' : '#c0bcca'}`, transitionDuration: '1s', '&:hover': { color: '#7806eb' } }} />
         :
-        <img
-          className="svg-icon22"
-          alt="clicked"
-          src={divBarIem2} 
-       />
+        <FullscreenExitOutlinedIcon sx={{ width: '30px', height: '30px', padding: 'auto', color: `${isWhiteMode ? '#606f86' : '#c0bcca'}`, transitionDuration: '1s', '&:hover': { color: '#7806eb' } }} />
       }
     </button>
   );

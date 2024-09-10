@@ -81,7 +81,7 @@ function Chats() {
   const [modalType, setModalType] = useState("");
   const [currentContact, setCurrentContact] = useState({});
   const [tempData, setTempData] = useState({});
-  const [newChat, setNewChat] = useState(true);
+  const [newChat, setNewChat] = useState(false);
   const [noChatContact, setNoChatContact] = useState(false)
 
   const theme = createTheme({

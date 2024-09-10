@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
-import './Home.css';
+import React from 'react';
 import Slider from './slides/Slider';
 
 
-class Home extends Component {
-  render() {
-    return (
-      <Slider/>
-    )
-  }
+const Home = ({ isWhiteMode }) => {
+
+  return (
+    <Slider isWhiteMode={isWhiteMode} />
+  )
 }
 
 export default Home;

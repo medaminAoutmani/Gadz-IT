@@ -17,7 +17,6 @@
   align-items: flex-start;
   background-color: rgba(129, 2, 255, 0.04);
   padding: 16px 32px;
-  width: calc(100% - 64px);
 }
 
 .form-chat-control {

@@ -1,5 +1,4 @@
 import React from 'react';
-import './CreateTeam.css'
 import { useState, useEffect, createContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import TextField from "@mui/material/TextField";
@@ -38,7 +37,7 @@ import male_09 from '../../../assets/male09jpg@2x.png';
 
 
 
-const ContactListItem = ({ item, id, addMember, onAddMember }) => {
+const ContactListItem = ({ item, id, addMember, onAddMember, isWhiteMode }) => {
   const [checked, setChecked] = useState(false);
 
   const handleAddMembrer = () => {
@@ -47,14 +46,14 @@ const ContactListItem = ({ item, id, addMember, onAddMember }) => {
   };
 
   return (
-    <ListItem sx={{ padding: '0', width: '100%', borderBottom: '0.8px solid #ab0cdf' }}>
-      <ListItemButton onClick={handleAddMembrer} sx={{ padding: '16px 32px', ':hover': { backgroundColor: '#2b0338' } }}>
+    <ListItem className={`w-full border-b-[0.8px] ${isWhiteMode ? 'border-[#e2e8f0]' : 'border-[#ab0cdf]'} `} sx={{ padding: '0' }}>
+      <ListItemButton onClick={handleAddMembrer} className='hover:bg-[#2b0338]' sx={{ padding: '16px 32px', }}>
         <ListItemAvatar>
           <Avatar alt={item.name} src={item.image} />
         </ListItemAvatar>
-        <Box sx={{ width: '100%' }}>
-          <ListItemText key={id} primary={<Typography variant="body2" style={{ color: 'white', fontSize: '15px', fontWeight: '500', lineHeight: '20px', margin: '0' }}>{item.name}</Typography>} disableTypography sx={{ margin: '0' }} />
-          <ListItemText key={id} primary={item.title} disableTypography sx={{ fontSize: '14px', margin: '0' }} />
+        <Box className='w-full'>
+          <ListItemText key={id} primary={<Typography variant="body2" className={`text-base font-medium ${isWhiteMode ? 'text-balck' : 'text-white'} `} >{item.name}</Typography>} disableTypography sx={{ margin: '0' }} />
+          <ListItemText key={id} primary={item.title} disableTypography className={`text-sm text-[#64748b]`} />
         </Box>
         {checked && <CheckCircleIcon sx={{ color: 'green' }} />}
       </ListItemButton>
@@ -64,7 +63,7 @@ const ContactListItem = ({ item, id, addMember, onAddMember }) => {
 
 let addMemberArray = [];
 
-const ContactList = ({ list, value, addMember, setAddMember }) => {
+const ContactList = ({ list, value, addMember, setAddMember, isWhiteMode }) => {
 
 
   const handleAddMember = (item, name) => {
@@ -100,26 +99,13 @@ const ContactList = ({ list, value, addMember, setAddMember }) => {
           )
         )
         .map((letter) => (
-          <div key={letter} style={{ width: '100%' }}>
+          <div key={letter} className='w-full'>
             <h2
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                width: 'calc(100%-32px)',
-                height: '30px',
-                paddingLeft: '32px',
-                borderTop: '0.8px solid #ab0cdf',
-                borderBottom: '0.8px solid #ab0cdf',
-                backgroundColor: '#191736',
-                fontSize: '14px',
-                fontWeight: '500',
-                margin: '0'
-              }}
+              className={`flex items-center justify-start h-[30px] pl-8 border-y-[0.8px] ${isWhiteMode ? 'bg-[#f8fafc] text-[#64748b] border-[#e2e8f0]' : 'bg-[#56046c] border-[#ab0cdf]'} font-medium text-sm ${isWhiteMode ? 'bg-[#f8fafc]' : ''}`}
             >
               {letter}
             </h2>
-            <List sx={{ padding: '0', width: '100%' }}>
+            <List className='w-full' sx={{ padding: 0 }}>
               {groupedContacts[letter]
                 .filter(
                   (f) =>
@@ -132,6 +118,7 @@ const ContactList = ({ list, value, addMember, setAddMember }) => {
                     key={key}
                     addMember={addMember}
                     onAddMember={handleAddMember}
+                    isWhiteMode={isWhiteMode}
                   />
                 ))}
             </List>
@@ -249,7 +236,7 @@ const CssTextField = styled(TextField)({
 
 
 
-export default function CreateTeam({ addMember, setAddMember }) {
+export default function CreateTeam({ addMember, setAddMember, isWhiteMode }) {
   const [searchInput, setSearchInput] = useState("");
   const [contacts, setContacts] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -279,7 +266,7 @@ export default function CreateTeam({ addMember, setAddMember }) {
 
 
   return (
-    <div className="divflex-auto2">
+    <div className={`flex flex-col w-full relative items-center justify-center `}>
       <contactContext.Provider
         value={{
           isOpen,
@@ -287,23 +274,20 @@ export default function CreateTeam({ addMember, setAddMember }) {
         }}
       >
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            marginBottom: "32px",
-          }}
+          className={`flex flex-auto flex-col justify-between w-full border-b px-6 py-8 sm:flex-row md:gap-0 md:flex-col md:px-8 `}
         >
-          <h1 style={{ color: 'white', marginBottom: '0' }}>Contacts</h1>
-          <div>{totalContacts} contacts</div>
+          <div>
+            <h1 className='text-4xl font-extrabold leading-none tracking-tight'>Contacts</h1>
+            <div className='text-sm text-[#64748b] ml-0.5 font-medium'>{totalContacts} contacts</div>
+          </div>
           <Grid
             container
             direction="row"
             justify="space-between"
             alignItems="center"
-            sx={{ width: "100%", marginTop: '16px' }}
+            className='w-full mt-[16px] sm:mt-0'
           >
-            <FormControl sx={{ width: "1100px", marginRight: "32px" }}>
+            <FormControl className='md:w-[74%] lg:w-[79%] xl:w-[83%] 2xl:w-[84%]' sx={{ marginRight: { xs: '16px', sm: '16px', md: '32px' } }}>
               <CssTextField
                 id="standard-basic"
                 label="Search Contacts"
@@ -313,7 +297,7 @@ export default function CreateTeam({ addMember, setAddMember }) {
                   style: {
                     height: "42px",
                     padding: "0 20px",
-                    color: "white",
+                    color: `${isWhiteMode ? 'black' : 'white'}`,
                   },
                   endAdornment: (
                     <InputAdornment position="end">
@@ -330,14 +314,14 @@ export default function CreateTeam({ addMember, setAddMember }) {
               onClick={handleSubmitTeam}
             >
               <AddIcon />
-              Add Contact
+              Add Contacts
 
             </Button>
           </Grid>
         </Box>
-        <Grid item xs={12} md={12} sx={{ width: "100%" }}>
+        <Grid item xs={12} md={12} className='w-full'>
           <div>
-            <ContactList list={filteredContacts} value={searchInput} setAddMember={setAddMember} addMember={addMember} />
+            <ContactList list={filteredContacts} value={searchInput} setAddMember={setAddMember} addMember={addMember} isWhiteMode={isWhiteMode} />
           </div>
         </Grid>
       </contactContext.Provider>
