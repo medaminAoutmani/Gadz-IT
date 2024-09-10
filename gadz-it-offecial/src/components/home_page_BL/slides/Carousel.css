@@ -6,7 +6,7 @@
 
 .carousel-inner {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
   flex-direction: row;
   gap: 20px;
   height: 91.819%;
@@ -24,17 +24,17 @@
 }
 
 .button-arrow {
-  
+
   background: none;
   border: none;
   cursor: pointer;
   margin-top: 1.3028%;
-  color :#ffffff;
+  color: #ffffff;
   width: 3.0123%;
   height: 68.05%;
 }
 
-.button-arrow :hover{
+.button-arrow :hover {
   box-shadow: inset 0 5px 15px #26343f;
   border-radius: 30%;
 }
@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1.3028%;
+
 }
 
 .indicator-buttons {
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-.indicators > button {
+.indicators>button {
   margin: 5px;
   background: none;
 }

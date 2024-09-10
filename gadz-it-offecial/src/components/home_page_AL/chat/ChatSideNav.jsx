@@ -56,7 +56,7 @@ const SideBar = () => {
   return (
     <Box
       sx={{
-
+        height: "calc(100vh - 70px)",
         width: 60,
         borderRight: '0.8px solid #ab0cdf',
         backgroundColor: 'rgba(129, 2, 255, 0.04)',
@@ -66,7 +66,7 @@ const SideBar = () => {
         py={3}
         alignItems={"center"}
         justifyContent="space-between"
-        sx={{ height: "calc(100vh - 119px)" }}
+        sx={{ height: "100%" }}
       >
         <Stack alignItems={"center"} spacing={4}>
 

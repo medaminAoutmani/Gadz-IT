@@ -1,7 +1,7 @@
 import './Carousel.css';
 import React, { useState, useEffect } from 'react';
 
-const Carousel = ({ slides, autoSlideInterval }) => {
+const Carousel = ({ slides, autoSlideInterval, isWhiteMode }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [disableNavigation, setDisableNavigation] = useState(false);
 
@@ -43,53 +43,56 @@ const Carousel = ({ slides, autoSlideInterval }) => {
   };
 
   return (
-    <div className="carousel">
-      <div
-        className="carousel-inner"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="carousel-slide">
-            {slide}
-          </div>
-        ))}
-      </div>
+    <>
+      <button
+        className="button-arrow"
 
-      <div className="carousel-buttons">
-        <button
-          className="button-arrow"
-          
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
+        onClick={() => {
+          updateIndex(activeIndex - 1);
+        }}
+      >
+        <span className="material-symbols-outlined">arrow_back_ios</span>
+      </button>
+      <div className="w-full xl:max-w-[80%] h-full overflow-hidden ">
+        <div
+          className="flex flex-row w-full h-[calc(100%-50px)] transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          <span className="material-symbols-outlined">arrow_back_ios</span>
-        </button>
-        <div className="indicators">
           {slides.map((slide, index) => (
-            <button
-              key={index}
-              className={`indicator-buttons ${
-                index === activeIndex ? 'indicator-symbol-active' : 'indicator-symbol'
-              }`}
-              onClick={() => {
-                updateIndex(index);
-              }}
-            >
-              <span className="material-symbols-outlined">radio_button_checked</span>
-            </button>
+            <div key={index} className="flex-none h-full w-full">
+              {slide}
+            </div>
           ))}
         </div>
-        <button
-          className="button-arrow"
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}
-        >
-          <span className="material-symbols-outlined">arrow_forward_ios</span>
-        </button>
+
+        <div className="flex items-center justify-center ">
+
+          <div className="indicators">
+            {slides.map((slide, index) => (
+              <button
+                key={index}
+                className={`indicator-buttons ${index === activeIndex ? 'indicator-symbol-active' : 'indicator-symbol'
+                  }`}
+                onClick={() => {
+                  updateIndex(index);
+                }}
+              >
+                <span className="material-symbols-outlined">radio_button_checked</span>
+              </button>
+            ))}
+          </div>
+
+        </div>
       </div>
-    </div>
+      <button
+        className="button-arrow"
+        onClick={() => {
+          updateIndex(activeIndex + 1);
+        }}
+      >
+        <span className="material-symbols-outlined">arrow_forward_ios</span>
+      </button>
+    </>
   );
 };
 

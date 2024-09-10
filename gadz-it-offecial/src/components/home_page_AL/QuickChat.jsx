@@ -1,5 +1,4 @@
 import { Component } from 'react'
-import './QuickChat.css';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -26,7 +25,7 @@ import male_09 from '../../assets/male09jpg@2x.png';
 
 
 
-export default function QuickChat() {
+export default function QuickChat({ isWhiteMode }) {
   const chatUsers = [
     { name: 'Holt Manning', image: male_02 },
     { name: 'Herring Gonzales', image: male_12 },
@@ -43,28 +42,26 @@ export default function QuickChat() {
   ];
 
   return (
-    <div className="quick-chat">
-      <div className="divfixed">
-        <div className="divflex12">
-          <div className="divquick-chat-header">
-            <div className="divflex13">
-              <div className="divflex14">
-                <img
-                  className="img-svg4"
-                  alt=""
-                  src={svg1}
-                />
-              </div>
+    <div className={`xl:flex xl:w-[56.8px] h-full fixed right-0 ${isWhiteMode ? 'shadow' : 'border-l border-l-[#ab0cdf] bg-[#17151b]'} hidden`}>
+      < div className="flex h-full w-full shrink-0 overflow-hidden " >
+        <div className="flex flex-col items-start justify-start self-stretch w-full h-full ">
+          <div className={`flex items-center justify-center self-stretch h-[70px] ${isWhiteMode ? '' : 'border-b-[0.8px] border-b-[#ab0cdf]'} `}>
+            <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 ease-out cursor-pointer">
+              <img
+                className="flex relative w-[23.4px] h-[24.3px]"
+                alt=""
+                src={svg1}
+              />
             </div>
           </div>
-          <Box sx={{ width: '100%', backgroundColor: 'transparent' }}>
+          <Box sx={{ width: '100%', backgroundColor: 'transparent', borderTop: `${isWhiteMode ? '0.8px solid #e2e8f0' : ''}` }}>
             <List sx={{ left: '0', width: '100%', backgroundColor: 'transparent', padding: '0' }}>
               {chatUsers.map((item) => (
                 <ListItem key={item.name} disablePadding>
                   <ListItemButton sx={{
                     height: '56px',
                     padding: '12px',
-                    "&:hover": { background: 'var(--color-gray-700)', color: 'white', opacity: '100%', }
+                    "&:hover": { background: `${isWhiteMode ? '#f1f5f9' : 'var(--color-gray-700)'}`, color: 'white', opacity: '100%', }
                   }}
 
                   >
@@ -75,8 +72,8 @@ export default function QuickChat() {
             </List>
           </Box>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 

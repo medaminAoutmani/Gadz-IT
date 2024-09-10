@@ -133,39 +133,37 @@ function Team({ addMember }) {
 
 
   return (
-    <div class="divmat-mdc-tab-body-wrapper">
+    <div className="flex h-full w-full text-[20px] sm:text-[30px] md:text-[40px] lg:text-[50px] overflow-hidden">
       {isTeamEmpty ?
-        <div class="tabpanel">
-          <div class="divmat-mdc-tab-body-content">
-            <div class="divgrid">
-              <div class="divflex11">
-                <div class="frame-div">
+        <div className="flex flex-[1] overflow-hidden h-full w-full">
+          <div className="flex flex-col justify-center items-center p-6 w-full h-full  ">
+            <div className="flex flex-col items-center justify-center p-0 gap-[40px] sm:gap-[60px] md:gap-[70px] lg:gap-[100px] h-full w-full mt-5">
+              <div className="flex flex-col items-center justify-center w-full rounded-2xl shadow border border-[#ab0cdf] py-10 px-6">
+                <div className="flex flex-col justify-center items-center gap-[20px] md:gap-[40px] ">
                   <div
-                    class="you-dont-have-a-team-create-parent"
+                    className="flex flex-col items-center justify-center gap-[20px] md:gap-[40px]"
                   >
-                    <div class="you-dont-have">
-                      You Don't Have a Team? Create
+                    <div className="relative tracking-[-0.4px] font-extrabold text-center">
+                      You Don't Have a Team? Create One!
                     </div>
-                    <div class="one">One!</div>
-                    <div class="a-guide-to">
-                      A Guide to Building Your Dream Project
-                      Team
+                    <div className="relative text-[12px] sm:text-[18px] md:text-[24px] lg:text-[30px] tracking-[-0.4px] font-thin text-center ">
+                      A Guide to Building Your Dream Project Team
                     </div>
                   </div>
                   <Button
+                    className='w-[110px] h-[30px] sm:w-[208px] sm:h-[65px] '
                     variant="contained"
                     style={{ textTransform: 'none' }}
                     sx={{
-                      width: '208px',
-                      height: '65px',
+                      marginTop: { xs: '0', sm: '20px' },
                       borderRadius: '999px',
                       backgroundColor: 'var(--color-crimson-200)',
-                      fontSize: 'var( --font-size-6xl)',
+                      fontSize: { xs: '16px', sm: '25px' },
                       lineHeight: '16.5px',
                       letterSpacing: '-0.4px',
                       fontWeight: '400',
                       '&:hover': {
-                        backgroundColor: '#e9176d'
+                        backgroundColor: '#ff4081'
                       }
                     }}
                     onClick={handleNavigateCreateTeam}
@@ -174,9 +172,9 @@ function Team({ addMember }) {
                   </Button>
                 </div>
               </div>
-              <div class="you-dont-have-a-team-create-parent">
+              <div className="relative w-full h-[150px] sm:h-[300px] md:h-[350px] lg:h-[400px] pb-[54%] ">
                 <img
-                  class="asset-1-2-gt-1"
+                  className="absolute h-full w-full object-cover"
                   alt=""
                   src={asset_12gt}
                 />

@@ -76,7 +76,6 @@ export default function ChatHeader() {
   return (
     <Box
       p={2}
-      width={"calc(100% - 32px)"}
       sx={{
         backgroundColor: 'rgba(129, 2, 255, 0.04)',
         boxShadow: "0px 0px 2px #ab0cdf",

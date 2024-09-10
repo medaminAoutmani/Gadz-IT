@@ -4,6 +4,7 @@
   height: 200px;
   object-fit: cover;
 }
+
 .solve-code-optimize {
   position: relative;
   line-height: 24px;
@@ -12,6 +13,7 @@
   height: 27px;
   flex-shrink: 0;
 }
+
 .solve-code-optimize-repeat-wrapper {
   width: 215px;
   display: flex;
@@ -19,17 +21,10 @@
   align-items: center;
   justify-content: space-between;
 }
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-3xs);
-  gap: var(--gap-3xs);
-  font-size: var(--h5-regular-size);
-}
+
+
 .log-in1 {
-  position: absolute;
+  position: relative;
   top: 30px;
   left: 197px;
   font-size: var(--font-size-31xl);
@@ -37,26 +32,21 @@
   font-weight: 500;
   font-family: var(--font-khand);
 }
+
 .mdiuser-icon {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  flex-shrink: 0;
-  z-index: 0;
-  top: 109px;
-  left: 54px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 113px;
+  left: 10px;
 }
 
 .lock-icon {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  flex-shrink: 0;
-  z-index: 0;
-  top: 198px;
-  left: 30px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 192px;
+  left: 10px;
 }
 
 .text {
@@ -65,6 +55,7 @@
   font-weight: 500;
   opacity: 0.56;
 }
+
 .text-wrapper {
   width: 25px;
   display: flex;
@@ -73,21 +64,22 @@
   justify-content: flex-start;
   z-index: 1;
 }
+
 .vector-icon {
   position: absolute;
   margin: 0 !important;
-  top: 9px;
-  left: 167px;
+  top: 112px;
+  left: 5px;
   width: 16px;
   height: 16px;
-  display: none;
   z-index: 2;
 }
+
 .input,
 .input1 {
   background-color: var(--colors-text);
-  position: absolute;
-  left: 50px;
+  position: relative;
+
   border-radius: var(--br-3xs);
   width: 400px;
   height: 60px;
@@ -99,14 +91,15 @@
   padding: var(--padding-8xs) var(--padding-11xl);
   box-sizing: border-box;
 }
+
 .input {
-  top: 92px;
+
   gap: var(--gap-xl);
   border: 0;
   font-weight: 500;
   font-family: var(--body-regular);
   font-size: var(--font-size-xl);
- 
+
 }
 
 
@@ -115,8 +108,8 @@
   font-weight: 500;
   font-family: var(--body-regular);
   font-size: var(--font-size-xl);
-  top: 182px;
 }
+
 .vector-icon1 {
   position: absolute;
   top: 194.7px;
@@ -124,11 +117,13 @@
   width: 16px;
   height: 14px;
 }
+
 .forgot-password,
 .label {
   position: relative;
   line-height: 20px;
 }
+
 .forgot-password {
   cursor: pointer;
   border: none;
@@ -136,9 +131,9 @@
   font-weight: 200;
   opacity: 0.2;
   font-size: 20px;
-  color: var( --color-white);
+  color: var(--color-white);
   background-color: var(--color-gray-500);
-  
+
 }
 
 
@@ -150,6 +145,7 @@
   color: var(--colors-text);
   text-align: left;
 }
+
 .button,
 .forgot-password-parent {
   display: flex;
@@ -157,41 +153,37 @@
   align-items: center;
   box-sizing: border-box;
 }
+
 .button {
   cursor: pointer;
   border: 0;
   padding: 1px 11px;
   background-color: transparent;
   border-radius: 16px;
-  background: linear-gradient(
-    90deg,
-    #d68485,
-    #c05ad6 20.93%,
-    #7614fb 49.05%,
-    #4912d3
-  );
+  background: linear-gradient(90deg,
+      #d68485,
+      #c05ad6 20.93%,
+      #7614fb 49.05%,
+      #4912d3);
   width: 116px;
   height: 44px;
   overflow: hidden;
   flex-shrink: 0;
   justify-content: center;
-  box-shadow: 0 5px 15px #8768f8;
 }
 
-.forgot-password-div :hover{
+.forgot-password-div :hover {
   box-shadow: 10px 10px 10px rgba(72, 19, 209, 0.25);
-  background-color:  var(--color-gray-100);
+  background-color: var(--color-gray-100);
 }
 
-.button-div :hover{
+.button-div :hover {
   box-shadow: 10px 10px 10px rgba(72, 19, 209, 0.25);
-  
+
 }
 
 .forgot-password-parent {
-  position: absolute;
-  top: 272px;
-  left: 50px;
+  position: relative;
   width: 400px;
   height: 60px;
   justify-content: flex-start;
@@ -208,8 +200,9 @@
   width: 20px;
   height: 20px;
 }
+
 .log-in {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   border-radius: var(--br-21xl);
@@ -219,19 +212,20 @@
   height: 340px;
   overflow: hidden;
 }
-.dont-have-an,
+
+
 .log-in-wrapper {
   position: relative;
   width: 500px;
   height: 340px;
 }
+
 .dont-have-an {
   line-height: 20px;
   font-weight: 200;
-  width: 216px;
-  height: 40px;
   flex-shrink: 0;
 }
+
 .dont-have-an,
 .main,
 .sign-up,
@@ -239,6 +233,7 @@
   display: flex;
   align-items: center;
 }
+
 .sign-up1 {
   cursor: pointer;
   text-decoration: none;
@@ -252,7 +247,7 @@
   font-size: 20px;
   flex-shrink: 0;
   border: none;
-  
+
 
 }
 
@@ -266,6 +261,7 @@
   overflow: hidden;
   justify-content: center;
 }
+
 .sign-up {
   border-radius: var(--br-21xl);
   background-color: var(--color-gray-500);
@@ -279,16 +275,19 @@
   gap: 1px;
   color: var(--color-white);
 }
+
 .main {
   flex: 1;
   width: 1400px;
   flex-direction: column;
   gap: var(--gap-xl);
 }
+
 .gadzit {
   position: relative;
   line-height: 22px;
 }
+
 .github-icon {
   position: relative;
   width: 14px;
@@ -296,22 +295,26 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .gadzit-parent {
   flex-direction: row;
   justify-content: flex-start;
   gap: 40px;
 }
+
 .footer1,
 .footer2,
 .gadzit-parent {
   display: flex;
   align-items: center;
 }
+
 .footer2 {
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-3xs);
 }
+
 .footer1 {
   height: 80px;
   overflow: hidden;
@@ -322,7 +325,7 @@
   box-sizing: border-box;
   font-size: var(--body-regular-size);
 }
-.desktop-2,
+
 .main-parent {
   width: 1920px;
   height: 980px;
@@ -331,6 +334,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .desktop-2 {
   position: relative;
   background-color: var(--color-gray-600);
@@ -344,4 +348,3 @@
   color: var(--colors-text);
   font-family: var(--body-regular);
 }
-
