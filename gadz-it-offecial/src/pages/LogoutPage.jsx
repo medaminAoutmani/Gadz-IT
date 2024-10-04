@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import './LogoutPage.css';
 import logo from '../public/logo-gadz-offeciel.svg';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
@@ -35,7 +34,7 @@ export default function LogoutPage() {
 
     const timeoutId = setTimeout(() => {
       navigate('/home');
-    }, 5000);
+    }, 5000); //5000
 
     return () => {
       clearInterval(timer);
@@ -44,32 +43,23 @@ export default function LogoutPage() {
   }, [navigate]);
 
   return (
-    <div className='logout-main'>
+    <div className='relative items-center justify-center w-full h-[100vh] text-md text-[Inter] '>
       <Box
-        sx={{
+        className='flex items-center justify-center h-full '
 
-          height: '100%',
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-          '& > :not(style)': {
-            m: 1,
-            width: 320,
-            height: 194.5,
-            padding: '48px'
-          },
-        }}
       >
         <DemoPaper
           variant="outlined"
+
           sx={{
             backgroundColor: '#1d1f24',
-            borderRadius: '16px'
+            borderRadius: '16px',
+            width: 'auto',
+            height: 'auto'
           }}
         >
-          <div className='cover'>
-            <img className='logo-image' src={logo} alt="" />
+          <div className='flex flex-col items-center justify-center w-full h-full'>
+            <img className='relative flex w-[70px] h-auto ' src={logo} alt="" />
             <Typography
               gutterBottom
               sx={{
