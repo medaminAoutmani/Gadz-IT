@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import './LoginPage.css';
 import gadzLogo from '../public/logo-gadz-offeciel.svg';
 import githubIcon from '../public/github-icon.svg';
-import Xicon from '../public/X-icon-vector.svg';
 import MdiUser from '../public/mdiuser.svg';
 import LockIcon from '../public/lock-icon.svg';
-import { TextField, InputAdornment } from '@mui/material';
-import PersonIcon from '@mui/icons-material/Person';
 
 
 const LoginPage = () => {
@@ -19,10 +15,6 @@ const LoginPage = () => {
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-  };
-
-  const handleClear = () => {
-    setEmail('');
   };
 
   const handleSubmit = (event) => {
@@ -79,20 +71,19 @@ const LoginPage = () => {
           <button className="relative cursor-pointer font-bold text-lg text-[#4a88cd] transition-all duration-300 hover:underline hover:text-blue-500">Sign Up</button>
         </div>
       </div>
-      <div className="flex flex-row w-[380px] items-center justify-center text-sm mt-[20px] sm:mt-0">
-        <div className="footer2">
-          <div className="gadzit-parent">
-            <div className="gadzit">Gadz’IT</div>
-            <img className="github-icon" alt="" src={githubIcon} />
+      <div className="flex flex-col w-[380px] items-center justify-start text-sm mt-[20px] sm:mt-0 gap-2">
 
-            <div className="gadzit">Terms and Services</div>
-          </div>
-          <div className="gadzit">
-            Copyright ©2023 Produced by Club Informatique Arts et Metiers
-            ENSAM Meknes
-          </div>
+        <div className="flex flex-row items-center justify-center gap-2">
+          Gadz’IT
+          <img className="relative w-[14px] h-[14px]" alt="" src={githubIcon} />
+          Terms and Services
+        </div>
+        <div className="relative leading-7">
+          Copyright ©2023 Produced by Club Informatique Arts et Metiers
+          ENSAM Meknes
         </div>
       </div>
+
     </div>
   )
 

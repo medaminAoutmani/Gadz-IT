@@ -1,9 +1,11 @@
 import './Carousel.css';
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
-const Carousel = ({ slides, autoSlideInterval, isWhiteMode }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const Carousel = ({ slides, autoSlideInterval, isWhiteMode, activeIndex, setActiveIndex }) => {
+
   const [disableNavigation, setDisableNavigation] = useState(false);
+
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -24,34 +26,37 @@ const Carousel = ({ slides, autoSlideInterval, isWhiteMode }) => {
       setTimeout(() => {
         setActiveIndex(slides.length - 1);
         setDisableNavigation(false);
-      }, 10000); // Delay of 15 seconds (15000 milliseconds)
+      }, 15000); // Delay of 15 seconds (15000 milliseconds)
     } else if (index >= slides.length) {
       setDisableNavigation(true);
       setActiveIndex(0);
       setTimeout(() => {
         setActiveIndex(0);
         setDisableNavigation(false);
-      }, 10000);
+      }, 15000);
     } else {
       setDisableNavigation(true);
       setActiveIndex(index);
       setTimeout(() => {
         setActiveIndex(index);
         setDisableNavigation(false);
-      }, 10000);
-    }
+      }, 15000);
+    };
   };
+
+
+
 
   return (
     <>
       <button
-        className="button-arrow"
-
+        className="flex items-center justify-center "
+        style={{ color: 'white' }}
         onClick={() => {
           updateIndex(activeIndex - 1);
         }}
       >
-        <span className="material-symbols-outlined">arrow_back_ios</span>
+        <span className="material-symbols-outlined w-[18px]">arrow_back_ios</span>
       </button>
       <div className="w-full xl:max-w-[80%] h-full overflow-hidden ">
         <div
@@ -59,7 +64,10 @@ const Carousel = ({ slides, autoSlideInterval, isWhiteMode }) => {
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="flex-none h-full w-full">
+            <div
+              key={index}
+              className="flex-none h-full w-full"
+            >
               {slide}
             </div>
           ))}
@@ -85,7 +93,8 @@ const Carousel = ({ slides, autoSlideInterval, isWhiteMode }) => {
         </div>
       </div>
       <button
-        className="button-arrow"
+        className="flex items-center justify-center "
+        style={{ color: 'white' }}
         onClick={() => {
           updateIndex(activeIndex + 1);
         }}

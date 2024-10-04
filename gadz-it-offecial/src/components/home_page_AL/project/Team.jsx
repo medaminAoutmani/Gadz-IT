@@ -183,16 +183,16 @@ function Team({ addMember }) {
           </div>
         </div>
         :
-        <div className="tabpanel">
-          <Box className="divmat-mdc-tab-body-content">
-            <Box className="divmat-grid">
-              <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
+        <div className="flex flex-[1] items-center justify-center overflow-hidden h-full w-full">
+          <Box className="flex flex-col justify-center items-center p-6 w-full h-full">
+            <Box className="w-full">
+              <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 16 }}>
                 {addMember.map((item, index) => (
                   <Grid item xs={2} sm={4} md={4} key={index}>
                     <Item sx={{ height: '312px' }}>
-                      <Box sx={{ width: '262px', height: '194px', padding: '32px' }}>
-                        <Avatar alt={item.name} src={item.image} sx={{ margin: '0 67px', width: '128px', height: '128px' }} />
-                        <Typography sx={{ marginTop: '24px', fontSize: '14px', fontWeight: '500', color: 'white' }}>{item.name}</Typography>
+                      <Box className='flex flex-col items-center justify-center gap-2' sx={{ width: '262px', padding: '32px' }}>
+                        <Avatar alt={item.name} src={item.image} sx={{ width: '128px', height: '128px' }} />
+                        <Typography sx={{ fontSize: '14px', fontWeight: '500', color: 'white' }}>{item.name}</Typography>
                         <Typography sx={{ fontSize: '14px', fontWeight: '500', color: '#94A3B8' }}>{item.title}</Typography>
                       </Box>
                       <Box sx={{ width: '100%', height: '53px', borderTop: '0.8px solid gray', }}>

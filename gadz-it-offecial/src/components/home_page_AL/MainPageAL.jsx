@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Typewriter from '../../utils/Typewriter';
 import Team from './project/Team';
 import ProjectHome from './project/ProjectHome';
 import CreateProject from './project/CreateProject';
@@ -59,9 +62,13 @@ function MainPageAL({ isWhiteMode }) {
                 <Avatar sx={{ width: '64px', height: '64px' }} alt="Remy Sharp" src={brian_hughes} />
               </div>
               <div className="ml-4 flex min-w-0 flex-col">
-                <div className="truncate text-2xl font-semibold leading-7 tracking-tight md:text-5xl md:leading-snug">
-                  Welcome back, Brian!
-                </div>
+                <motion.div
+                  className="truncate text-2xl font-semibold leading-7 tracking-tight md:text-5xl md:leading-snug"
+
+                >
+                  <Typewriter phrases={["Welcome back, Brian!", "Welcome back, Brian!", "Welcome back, Brian!"]} />
+
+                </motion.div>
                 <div className="flex items-center text-[14px]">
                   <NotificationsIcon sx={{ width: '20px', height: '20px', color: '#64748b' }} />
                   <div className="text-secondary ml-1.5 truncate leading-6 text-[#64748b]">You have 2 messages and 15 new tasks</div>

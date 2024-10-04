@@ -1,5 +1,4 @@
 import React, { useState, } from 'react';
-import './SearchBar.css'
 import Xicon from '../../public/clear-white-item.svg';
 
 

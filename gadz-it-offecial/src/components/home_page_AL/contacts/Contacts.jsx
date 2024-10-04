@@ -295,7 +295,7 @@ export default function Contacts() {
 
 
   return (
-    <Box className="divflex-auto1">
+    <Box className="relative flex flex-row items-start justify-start w-full m-0">
       <Box className="divflex-auto2" sx={{ width: contactDetails.open ? 'calc(100% - 640px)' : '100%', transition: 'width 0.5s' }}>
         <contactContext.Provider
           value={{
@@ -305,16 +305,16 @@ export default function Contacts() {
         >
           <Box className='header-box-contacts' >
             <div >
-              <h1 style={{ color: 'white', marginBottom: '0' }}>Contacts</h1>
-              <div style={{ display: 'flex', alignItems: 'flex-start' }}>{totalContacts} contacts</div>
+              <h1 className='text-white text-4xl mb-0' >Contacts</h1>
+              <div className='flex items-start text-sm' >{totalContacts} contacts</div>
             </div>
             <Grid
               container
               direction="row"
               justify="space-between"
               alignItems="center"
-              sx={{ width: "minWidth", marginTop: '16px' }}
-              className='search-grid'
+              sx={{ width: "minWidth" }}
+              className='full mt-4'
             >
               <FormControl className='form-control' sx={{ marginRight: "32px" }}>
                 <CssTextField
